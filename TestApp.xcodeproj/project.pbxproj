@@ -15,6 +15,7 @@
 		D2855E61180F4A7E003E335D /* star.png in Resources */ = {isa = PBXBuildFile; fileRef = D2855E60180F4A7E003E335D /* star.png */; };
 		D2855E70180FE267003E335D /* shotsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2855E6F180FE267003E335D /* shotsViewController.m */; };
 		D2855E73180FE378003E335D /* favoriteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2855E72180FE378003E335D /* favoriteViewController.m */; };
+		D2855F0918103EED003E335D /* shotCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D2855F0818103EED003E335D /* shotCell.m */; };
 		D28E1BBD180D816200533D73 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D28E1BBC180D816200533D73 /* Foundation.framework */; };
 		D28E1BBF180D816200533D73 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D28E1BBE180D816200533D73 /* CoreGraphics.framework */; };
 		D28E1BC1180D816200533D73 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D28E1BC0180D816200533D73 /* UIKit.framework */; };
@@ -27,6 +28,42 @@
 		D28E1BD8180D816200533D73 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D28E1BC0180D816200533D73 /* UIKit.framework */; };
 		D28E1BE0180D816200533D73 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D28E1BDE180D816200533D73 /* InfoPlist.strings */; };
 		D28E1BE2180D816200533D73 /* TestAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D28E1BE1180D816200533D73 /* TestAppTests.m */; };
+		D2EC399218105376006F40EE /* A Convicts Home.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = D2EC396E18105376006F40EE /* A Convicts Home.jpeg */; };
+		D2EC399318105376006F40EE /* Black Jack.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = D2EC396F18105376006F40EE /* Black Jack.jpeg */; };
+		D2EC399418105376006F40EE /* Caney The Clown.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = D2EC397018105376006F40EE /* Caney The Clown.jpeg */; };
+		D2EC399518105376006F40EE /* Cast Iron Billy.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = D2EC397118105376006F40EE /* Cast Iron Billy.jpeg */; };
+		D2EC399618105376006F40EE /* Clapham Common Industries.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = D2EC397218105376006F40EE /* Clapham Common Industries.jpeg */; };
+		D2EC399718105376006F40EE /* Covent Garden Flower Women.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = D2EC397318105376006F40EE /* Covent Garden Flower Women.jpeg */; };
+		D2EC399818105376006F40EE /* Covent Garden Labourers.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = D2EC397418105376006F40EE /* Covent Garden Labourers.jpeg */; };
+		D2EC399918105376006F40EE /* Dealer In Fancy Ware.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = D2EC397518105376006F40EE /* Dealer In Fancy Ware.jpeg */; };
+		D2EC399A18105376006F40EE /* Flying Dustmen.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = D2EC397618105376006F40EE /* Flying Dustmen.jpeg */; };
+		D2EC399B18105376006F40EE /* Halpenny Ices.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = D2EC397718105376006F40EE /* Halpenny Ices.jpeg */; };
+		D2EC399C18105376006F40EE /* Hookey Alf, Of Whitechapel.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = D2EC397818105376006F40EE /* Hookey Alf, Of Whitechapel.jpeg */; };
+		D2EC399D18105376006F40EE /* Italian Street Musicians.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = D2EC397918105376006F40EE /* Italian Street Musicians.jpeg */; };
+		D2EC399E18105376006F40EE /* London Cabmen.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = D2EC397A18105376006F40EE /* London Cabmen.jpeg */; };
+		D2EC399F18105376006F40EE /* London Nomades.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = D2EC397B18105376006F40EE /* London Nomades.jpeg */; };
+		D2EC39A018105376006F40EE /* Mush Fakers And Ginger Beer Makers.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = D2EC397C18105376006F40EE /* Mush Fakers And Ginger Beer Makers.jpeg */; };
+		D2EC39A118105376006F40EE /* November Effigies.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = D2EC397D18105376006F40EE /* November Effigies.jpeg */; };
+		D2EC39A218105376006F40EE /* Old Furniture.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = D2EC397E18105376006F40EE /* Old Furniture.jpeg */; };
+		D2EC39A318105376006F40EE /* Public Disinfectors.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = D2EC397F18105376006F40EE /* Public Disinfectors.jpeg */; };
+		D2EC39A418105376006F40EE /* Recruiting Sergeants At Westminster.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = D2EC398018105376006F40EE /* Recruiting Sergeants At Westminster.jpeg */; };
+		D2EC39A518105376006F40EE /* Street Advertising.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = D2EC398118105376006F40EE /* Street Advertising.jpeg */; };
+		D2EC39A618105376006F40EE /* Street Doctors.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = D2EC398218105376006F40EE /* Street Doctors.jpeg */; };
+		D2EC39A718105376006F40EE /* Street Floods In Lambeth.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = D2EC398318105376006F40EE /* Street Floods In Lambeth.jpeg */; };
+		D2EC39A818105376006F40EE /* The Cheap Fish Of St. Giles's.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = D2EC398418105376006F40EE /* The Cheap Fish Of St. Giles's.jpeg */; };
+		D2EC39A918105376006F40EE /* The Crawlers.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = D2EC398518105376006F40EE /* The Crawlers.jpeg */; };
+		D2EC39AA18105376006F40EE /* The Dramatic Shoe Black.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = D2EC398618105376006F40EE /* The Dramatic Shoe Black.jpeg */; };
+		D2EC39AB18105376006F40EE /* The Independent Shoe Black.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = D2EC398718105376006F40EE /* The Independent Shoe Black.jpeg */; };
+		D2EC39AC18105376006F40EE /* The London Boardmen.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = D2EC398818105376006F40EE /* The London Boardmen.jpeg */; };
+		D2EC39AD18105376006F40EE /* The Old Clothes Of St. Giles.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = D2EC398918105376006F40EE /* The Old Clothes Of St. Giles.jpeg */; };
+		D2EC39AE18105376006F40EE /* The Seller Of Shell Fish.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = D2EC398A18105376006F40EE /* The Seller Of Shell Fish.jpeg */; };
+		D2EC39AF18105376006F40EE /* The Street Fruit Trade.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = D2EC398B18105376006F40EE /* The Street Fruit Trade.jpeg */; };
+		D2EC39B018105376006F40EE /* The Street Locksmith.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = D2EC398C18105376006F40EE /* The Street Locksmith.jpeg */; };
+		D2EC39B118105376006F40EE /* The Temperance Sweep.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = D2EC398D18105376006F40EE /* The Temperance Sweep.jpeg */; };
+		D2EC39B218105376006F40EE /* The Wall Worker.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = D2EC398E18105376006F40EE /* The Wall Worker.jpeg */; };
+		D2EC39B318105376006F40EE /* The Water Cart.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = D2EC398F18105376006F40EE /* The Water Cart.jpeg */; };
+		D2EC39B418105376006F40EE /* Tickets, The Card Dealer.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = D2EC399018105376006F40EE /* Tickets, The Card Dealer.jpeg */; };
+		D2EC39B518105376006F40EE /* Workers On The Silent Highway.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = D2EC399118105376006F40EE /* Workers On The Silent Highway.jpeg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +87,8 @@
 		D2855E6F180FE267003E335D /* shotsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = shotsViewController.m; sourceTree = "<group>"; };
 		D2855E71180FE378003E335D /* favoriteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = favoriteViewController.h; sourceTree = "<group>"; };
 		D2855E72180FE378003E335D /* favoriteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = favoriteViewController.m; sourceTree = "<group>"; };
+		D2855F0718103EED003E335D /* shotCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = shotCell.h; sourceTree = "<group>"; };
+		D2855F0818103EED003E335D /* shotCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = shotCell.m; sourceTree = "<group>"; };
 		D28E1BB9180D816200533D73 /* TestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D28E1BBC180D816200533D73 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D28E1BBE180D816200533D73 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -66,6 +105,42 @@
 		D28E1BDD180D816200533D73 /* TestAppTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TestAppTests-Info.plist"; sourceTree = "<group>"; };
 		D28E1BDF180D816200533D73 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D28E1BE1180D816200533D73 /* TestAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestAppTests.m; sourceTree = "<group>"; };
+		D2EC396E18105376006F40EE /* A Convicts Home.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "A Convicts Home.jpeg"; sourceTree = "<group>"; };
+		D2EC396F18105376006F40EE /* Black Jack.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Black Jack.jpeg"; sourceTree = "<group>"; };
+		D2EC397018105376006F40EE /* Caney The Clown.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Caney The Clown.jpeg"; sourceTree = "<group>"; };
+		D2EC397118105376006F40EE /* Cast Iron Billy.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Cast Iron Billy.jpeg"; sourceTree = "<group>"; };
+		D2EC397218105376006F40EE /* Clapham Common Industries.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Clapham Common Industries.jpeg"; sourceTree = "<group>"; };
+		D2EC397318105376006F40EE /* Covent Garden Flower Women.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Covent Garden Flower Women.jpeg"; sourceTree = "<group>"; };
+		D2EC397418105376006F40EE /* Covent Garden Labourers.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Covent Garden Labourers.jpeg"; sourceTree = "<group>"; };
+		D2EC397518105376006F40EE /* Dealer In Fancy Ware.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Dealer In Fancy Ware.jpeg"; sourceTree = "<group>"; };
+		D2EC397618105376006F40EE /* Flying Dustmen.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Flying Dustmen.jpeg"; sourceTree = "<group>"; };
+		D2EC397718105376006F40EE /* Halpenny Ices.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Halpenny Ices.jpeg"; sourceTree = "<group>"; };
+		D2EC397818105376006F40EE /* Hookey Alf, Of Whitechapel.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Hookey Alf, Of Whitechapel.jpeg"; sourceTree = "<group>"; };
+		D2EC397918105376006F40EE /* Italian Street Musicians.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Italian Street Musicians.jpeg"; sourceTree = "<group>"; };
+		D2EC397A18105376006F40EE /* London Cabmen.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "London Cabmen.jpeg"; sourceTree = "<group>"; };
+		D2EC397B18105376006F40EE /* London Nomades.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "London Nomades.jpeg"; sourceTree = "<group>"; };
+		D2EC397C18105376006F40EE /* Mush Fakers And Ginger Beer Makers.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Mush Fakers And Ginger Beer Makers.jpeg"; sourceTree = "<group>"; };
+		D2EC397D18105376006F40EE /* November Effigies.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "November Effigies.jpeg"; sourceTree = "<group>"; };
+		D2EC397E18105376006F40EE /* Old Furniture.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Old Furniture.jpeg"; sourceTree = "<group>"; };
+		D2EC397F18105376006F40EE /* Public Disinfectors.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Public Disinfectors.jpeg"; sourceTree = "<group>"; };
+		D2EC398018105376006F40EE /* Recruiting Sergeants At Westminster.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Recruiting Sergeants At Westminster.jpeg"; sourceTree = "<group>"; };
+		D2EC398118105376006F40EE /* Street Advertising.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Street Advertising.jpeg"; sourceTree = "<group>"; };
+		D2EC398218105376006F40EE /* Street Doctors.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Street Doctors.jpeg"; sourceTree = "<group>"; };
+		D2EC398318105376006F40EE /* Street Floods In Lambeth.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Street Floods In Lambeth.jpeg"; sourceTree = "<group>"; };
+		D2EC398418105376006F40EE /* The Cheap Fish Of St. Giles's.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "The Cheap Fish Of St. Giles's.jpeg"; sourceTree = "<group>"; };
+		D2EC398518105376006F40EE /* The Crawlers.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "The Crawlers.jpeg"; sourceTree = "<group>"; };
+		D2EC398618105376006F40EE /* The Dramatic Shoe Black.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "The Dramatic Shoe Black.jpeg"; sourceTree = "<group>"; };
+		D2EC398718105376006F40EE /* The Independent Shoe Black.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "The Independent Shoe Black.jpeg"; sourceTree = "<group>"; };
+		D2EC398818105376006F40EE /* The London Boardmen.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "The London Boardmen.jpeg"; sourceTree = "<group>"; };
+		D2EC398918105376006F40EE /* The Old Clothes Of St. Giles.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "The Old Clothes Of St. Giles.jpeg"; sourceTree = "<group>"; };
+		D2EC398A18105376006F40EE /* The Seller Of Shell Fish.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "The Seller Of Shell Fish.jpeg"; sourceTree = "<group>"; };
+		D2EC398B18105376006F40EE /* The Street Fruit Trade.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "The Street Fruit Trade.jpeg"; sourceTree = "<group>"; };
+		D2EC398C18105376006F40EE /* The Street Locksmith.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "The Street Locksmith.jpeg"; sourceTree = "<group>"; };
+		D2EC398D18105376006F40EE /* The Temperance Sweep.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "The Temperance Sweep.jpeg"; sourceTree = "<group>"; };
+		D2EC398E18105376006F40EE /* The Wall Worker.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "The Wall Worker.jpeg"; sourceTree = "<group>"; };
+		D2EC398F18105376006F40EE /* The Water Cart.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "The Water Cart.jpeg"; sourceTree = "<group>"; };
+		D2EC399018105376006F40EE /* Tickets, The Card Dealer.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Tickets, The Card Dealer.jpeg"; sourceTree = "<group>"; };
+		D2EC399118105376006F40EE /* Workers On The Silent Highway.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Workers On The Silent Highway.jpeg"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +221,8 @@
 				D2855E6F180FE267003E335D /* shotsViewController.m */,
 				D2855E71180FE378003E335D /* favoriteViewController.h */,
 				D2855E72180FE378003E335D /* favoriteViewController.m */,
+				D2855F0718103EED003E335D /* shotCell.h */,
+				D2855F0818103EED003E335D /* shotCell.m */,
 			);
 			path = TestApp;
 			sourceTree = "<group>";
@@ -153,6 +230,7 @@
 		D28E1BC3180D816200533D73 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				D2EC396D18105376006F40EE /* Shots */,
 				D2855E4F180F47A3003E335D /* TabBarIcons */,
 				D28E1BC4180D816200533D73 /* TestApp-Info.plist */,
 				D28E1BC5180D816200533D73 /* InfoPlist.strings */,
@@ -178,6 +256,49 @@
 				D28E1BDE180D816200533D73 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D2EC396D18105376006F40EE /* Shots */ = {
+			isa = PBXGroup;
+			children = (
+				D2EC396E18105376006F40EE /* A Convicts Home.jpeg */,
+				D2EC396F18105376006F40EE /* Black Jack.jpeg */,
+				D2EC397018105376006F40EE /* Caney The Clown.jpeg */,
+				D2EC397118105376006F40EE /* Cast Iron Billy.jpeg */,
+				D2EC397218105376006F40EE /* Clapham Common Industries.jpeg */,
+				D2EC397318105376006F40EE /* Covent Garden Flower Women.jpeg */,
+				D2EC397418105376006F40EE /* Covent Garden Labourers.jpeg */,
+				D2EC397518105376006F40EE /* Dealer In Fancy Ware.jpeg */,
+				D2EC397618105376006F40EE /* Flying Dustmen.jpeg */,
+				D2EC397718105376006F40EE /* Halpenny Ices.jpeg */,
+				D2EC397818105376006F40EE /* Hookey Alf, Of Whitechapel.jpeg */,
+				D2EC397918105376006F40EE /* Italian Street Musicians.jpeg */,
+				D2EC397A18105376006F40EE /* London Cabmen.jpeg */,
+				D2EC397B18105376006F40EE /* London Nomades.jpeg */,
+				D2EC397C18105376006F40EE /* Mush Fakers And Ginger Beer Makers.jpeg */,
+				D2EC397D18105376006F40EE /* November Effigies.jpeg */,
+				D2EC397E18105376006F40EE /* Old Furniture.jpeg */,
+				D2EC397F18105376006F40EE /* Public Disinfectors.jpeg */,
+				D2EC398018105376006F40EE /* Recruiting Sergeants At Westminster.jpeg */,
+				D2EC398118105376006F40EE /* Street Advertising.jpeg */,
+				D2EC398218105376006F40EE /* Street Doctors.jpeg */,
+				D2EC398318105376006F40EE /* Street Floods In Lambeth.jpeg */,
+				D2EC398418105376006F40EE /* The Cheap Fish Of St. Giles's.jpeg */,
+				D2EC398518105376006F40EE /* The Crawlers.jpeg */,
+				D2EC398618105376006F40EE /* The Dramatic Shoe Black.jpeg */,
+				D2EC398718105376006F40EE /* The Independent Shoe Black.jpeg */,
+				D2EC398818105376006F40EE /* The London Boardmen.jpeg */,
+				D2EC398918105376006F40EE /* The Old Clothes Of St. Giles.jpeg */,
+				D2EC398A18105376006F40EE /* The Seller Of Shell Fish.jpeg */,
+				D2EC398B18105376006F40EE /* The Street Fruit Trade.jpeg */,
+				D2EC398C18105376006F40EE /* The Street Locksmith.jpeg */,
+				D2EC398D18105376006F40EE /* The Temperance Sweep.jpeg */,
+				D2EC398E18105376006F40EE /* The Wall Worker.jpeg */,
+				D2EC398F18105376006F40EE /* The Water Cart.jpeg */,
+				D2EC399018105376006F40EE /* Tickets, The Card Dealer.jpeg */,
+				D2EC399118105376006F40EE /* Workers On The Silent Highway.jpeg */,
+			);
+			path = Shots;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -255,14 +376,50 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2EC39AE18105376006F40EE /* The Seller Of Shell Fish.jpeg in Resources */,
+				D2EC39B518105376006F40EE /* Workers On The Silent Highway.jpeg in Resources */,
 				D2855E5F180F4A69003E335D /* cog_02.png in Resources */,
+				D2EC399918105376006F40EE /* Dealer In Fancy Ware.jpeg in Resources */,
 				D2855E59180F4A4D003E335D /* cog_02@2x.png in Resources */,
+				D2EC399718105376006F40EE /* Covent Garden Flower Women.jpeg in Resources */,
+				D2EC39A218105376006F40EE /* Old Furniture.jpeg in Resources */,
 				D2855E5B180F4A54003E335D /* camera@2x.png in Resources */,
+				D2EC39B018105376006F40EE /* The Street Locksmith.jpeg in Resources */,
 				D2855E57180F4A30003E335D /* star@2x.png in Resources */,
 				D28E1BC7180D816200533D73 /* InfoPlist.strings in Resources */,
+				D2EC399A18105376006F40EE /* Flying Dustmen.jpeg in Resources */,
+				D2EC39A918105376006F40EE /* The Crawlers.jpeg in Resources */,
+				D2EC399318105376006F40EE /* Black Jack.jpeg in Resources */,
+				D2EC399818105376006F40EE /* Covent Garden Labourers.jpeg in Resources */,
 				D2855E61180F4A7E003E335D /* star.png in Resources */,
+				D2EC39AC18105376006F40EE /* The London Boardmen.jpeg in Resources */,
+				D2EC399518105376006F40EE /* Cast Iron Billy.jpeg in Resources */,
+				D2EC39A018105376006F40EE /* Mush Fakers And Ginger Beer Makers.jpeg in Resources */,
+				D2EC39B218105376006F40EE /* The Wall Worker.jpeg in Resources */,
+				D2EC39B318105376006F40EE /* The Water Cart.jpeg in Resources */,
+				D2EC399418105376006F40EE /* Caney The Clown.jpeg in Resources */,
+				D2EC39AB18105376006F40EE /* The Independent Shoe Black.jpeg in Resources */,
+				D2EC39A418105376006F40EE /* Recruiting Sergeants At Westminster.jpeg in Resources */,
+				D2EC39B418105376006F40EE /* Tickets, The Card Dealer.jpeg in Resources */,
+				D2EC39A818105376006F40EE /* The Cheap Fish Of St. Giles's.jpeg in Resources */,
+				D2EC39A618105376006F40EE /* Street Doctors.jpeg in Resources */,
+				D2EC399618105376006F40EE /* Clapham Common Industries.jpeg in Resources */,
+				D2EC399D18105376006F40EE /* Italian Street Musicians.jpeg in Resources */,
+				D2EC399C18105376006F40EE /* Hookey Alf, Of Whitechapel.jpeg in Resources */,
+				D2EC39A318105376006F40EE /* Public Disinfectors.jpeg in Resources */,
+				D2EC399E18105376006F40EE /* London Cabmen.jpeg in Resources */,
+				D2EC39A118105376006F40EE /* November Effigies.jpeg in Resources */,
 				D2855E5D180F4A60003E335D /* camera.png in Resources */,
+				D2EC399218105376006F40EE /* A Convicts Home.jpeg in Resources */,
 				D28E1BCF180D816200533D73 /* Images.xcassets in Resources */,
+				D2EC399F18105376006F40EE /* London Nomades.jpeg in Resources */,
+				D2EC39A518105376006F40EE /* Street Advertising.jpeg in Resources */,
+				D2EC399B18105376006F40EE /* Halpenny Ices.jpeg in Resources */,
+				D2EC39A718105376006F40EE /* Street Floods In Lambeth.jpeg in Resources */,
+				D2EC39AA18105376006F40EE /* The Dramatic Shoe Black.jpeg in Resources */,
+				D2EC39AD18105376006F40EE /* The Old Clothes Of St. Giles.jpeg in Resources */,
+				D2EC39B118105376006F40EE /* The Temperance Sweep.jpeg in Resources */,
+				D2EC39AF18105376006F40EE /* The Street Fruit Trade.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,6 +438,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2855F0918103EED003E335D /* shotCell.m in Sources */,
 				D28E1BCD180D816200533D73 /* AppDelegate.m in Sources */,
 				D2855E70180FE267003E335D /* shotsViewController.m in Sources */,
 				D2855E73180FE378003E335D /* favoriteViewController.m in Sources */,
@@ -334,7 +492,7 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
@@ -374,7 +532,7 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;

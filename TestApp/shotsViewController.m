@@ -7,6 +7,7 @@
 //
 
 #import "shotsViewController.h"
+#import "shotCell.h"
 
 @interface shotsViewController ()
 
@@ -32,6 +33,12 @@
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    shotsPaths = [[NSBundle mainBundle] pathsForResourcesOfType:@"jpeg" inDirectory:nil];
+    NSLog(@"DA PATH IS %@", shotsPaths);
+    if (self.tableView) {
+        NSLog(@"fine tableview");
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -44,25 +51,29 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+    return [shotsPaths count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
     // Configure the cell...
-    
+    if (cell == nil) {
+        cell = [[[shotCell alloc] initWithStyle:UITableViewCellStyleDefault
+                                       reuseIdentifier:CellIdentifier] autorelease];
+    }
+    NSString *t = [[shotsPaths objectAtIndex:indexPath.row] lastPathComponent];
+    cell.textLabel.text = t;
+    cell.imageView.image = [[UIImage alloc] initWithContentsOfFile:t];
     return cell;
 }
 

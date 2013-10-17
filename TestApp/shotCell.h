@@ -1,5 +1,5 @@
 //
-//  shotsViewController.h
+//  shotCell.h
 //  TestApp
 //
 //  Created by Watta Puck on 10/17/13.
@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface shotsViewController : UITableViewController {
-    NSDictionary *shots;
-    NSArray *shotsPaths;
+@interface shotCell : UITableViewCell {
+    UIButton *cellButton;
 }
+
+@property (nonatomic, retain)UIButton *cellButton;
+
 @end
