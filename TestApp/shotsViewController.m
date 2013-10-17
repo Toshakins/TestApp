@@ -15,6 +15,11 @@
 
 @implementation shotsViewController
 
+- (void)toggleFavorite:(id)sender{
+    [(UIButton*)sender setBackgroundImage:[UIImage imageNamed:@"favheart.png"] forState:UIControlStateNormal];
+    
+}
+
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
@@ -29,16 +34,12 @@
     [super viewDidLoad];
 
     // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;®
+    // self.clearsSelectionOnViewWillAppear = NO;
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
-    shotsPaths = [[NSBundle mainBundle] pathsForResourcesOfType:@"jpeg" inDirectory:nil];
-    NSLog(@"DA PATH IS %@", shotsPaths);
-    if (self.tableView) {
-        NSLog(@"fine tableview");
-    }
+    shotsPaths = [[NSArray alloc] initWithArray:[[NSBundle mainBundle] pathsForResourcesOfType:@"jpeg" inDirectory:nil]];
 }
 
 - (void)didReceiveMemoryWarning
@@ -64,16 +65,28 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:nil];
     
     // Configure the cell...
     if (cell == nil) {
         cell = [[[shotCell alloc] initWithStyle:UITableViewCellStyleDefault
                                        reuseIdentifier:CellIdentifier] autorelease];
     }
-    NSString *t = [[shotsPaths objectAtIndex:indexPath.row] lastPathComponent];
-    cell.textLabel.text = t;
-    cell.imageView.image = [[UIImage alloc] initWithContentsOfFile:t];
+    NSString *t = [[NSString alloc] initWithString:[[shotsPaths objectAtIndex:indexPath.row] lastPathComponent]];
+    
+    UIImageView *photo = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 50, 50)];
+    [cell.contentView addSubview:photo];
+    photo.image = [UIImage imageNamed:t];
+    
+    UILabel *title = [[UILabel alloc] initWithFrame:CGRectMake(50, 0, 200, 50)];
+    [cell.contentView addSubview:title];
+    title.text = [t stringByDeletingPathExtension];
+    
+    UIButton *myButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    [myButton addTarget:self action:@selector(toggleFavorite:) forControlEvents:UIControlEventTouchUpInside];
+    [myButton setBackgroundImage:[UIImage imageNamed:@"heart.png"] forState:UIControlStateNormal];
+    myButton.frame = CGRectMake(0.0, 0.0, 30.0, 30.0);
+    cell.accessoryView = myButton;
     return cell;
 }
 

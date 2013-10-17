@@ -19,6 +19,7 @@
         // Initialization code
         cellButton = [[UIButton alloc] init];
         [self.contentView addSubview:cellButton];
+        self.imageView.contentMode = UIViewContentModeScaleAspectFit;
     }
     return self;
 }
