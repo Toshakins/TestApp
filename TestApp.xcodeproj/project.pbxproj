@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		D2855E70180FE267003E335D /* shotsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2855E6F180FE267003E335D /* shotsViewController.m */; };
-		D2855E73180FE378003E335D /* favoriteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2855E72180FE378003E335D /* favoriteViewController.m */; };
 		D2855F0918103EED003E335D /* shotCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D2855F0818103EED003E335D /* shotCell.m */; };
 		D28E1BBD180D816200533D73 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D28E1BBC180D816200533D73 /* Foundation.framework */; };
 		D28E1BBF180D816200533D73 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D28E1BBE180D816200533D73 /* CoreGraphics.framework */; };
@@ -70,6 +69,8 @@
 		D2EC39CA18109E5D006F40EE /* favheart@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2EC39C818109E5D006F40EE /* favheart@2x.png */; };
 		D2EC39CE1810ADDF006F40EE /* favButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D2EC39CD1810ADDF006F40EE /* favButton.m */; };
 		D2EC39D11810B5CF006F40EE /* Favorites.m in Sources */ = {isa = PBXBuildFile; fileRef = D2EC39D01810B5CF006F40EE /* Favorites.m */; };
+		D2EC39D318111B36006F40EE /* favorites.plist in Resources */ = {isa = PBXBuildFile; fileRef = D2EC39D218111B36006F40EE /* favorites.plist */; };
+		D2EC39D618112588006F40EE /* favoriteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2EC39D518112588006F40EE /* favoriteViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,8 +86,6 @@
 /* Begin PBXFileReference section */
 		D2855E6E180FE267003E335D /* shotsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = shotsViewController.h; sourceTree = "<group>"; };
 		D2855E6F180FE267003E335D /* shotsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = shotsViewController.m; sourceTree = "<group>"; };
-		D2855E71180FE378003E335D /* favoriteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = favoriteViewController.h; sourceTree = "<group>"; };
-		D2855E72180FE378003E335D /* favoriteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = favoriteViewController.m; sourceTree = "<group>"; };
 		D2855F0718103EED003E335D /* shotCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = shotCell.h; sourceTree = "<group>"; };
 		D2855F0818103EED003E335D /* shotCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = shotCell.m; sourceTree = "<group>"; };
 		D28E1BB9180D816200533D73 /* TestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -155,6 +154,9 @@
 		D2EC39CD1810ADDF006F40EE /* favButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = favButton.m; path = Helper/favButton.m; sourceTree = "<group>"; };
 		D2EC39CF1810B5CF006F40EE /* Favorites.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Favorites.h; path = Helper/Favorites.h; sourceTree = "<group>"; };
 		D2EC39D01810B5CF006F40EE /* Favorites.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Favorites.m; path = Helper/Favorites.m; sourceTree = "<group>"; };
+		D2EC39D218111B36006F40EE /* favorites.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = favorites.plist; sourceTree = "<group>"; };
+		D2EC39D418112588006F40EE /* favoriteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = favoriteViewController.h; sourceTree = "<group>"; };
+		D2EC39D518112588006F40EE /* favoriteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = favoriteViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -221,10 +223,10 @@
 				D28E1BC3180D816200533D73 /* Supporting Files */,
 				D2855E6E180FE267003E335D /* shotsViewController.h */,
 				D2855E6F180FE267003E335D /* shotsViewController.m */,
-				D2855E71180FE378003E335D /* favoriteViewController.h */,
-				D2855E72180FE378003E335D /* favoriteViewController.m */,
 				D2855F0718103EED003E335D /* shotCell.h */,
 				D2855F0818103EED003E335D /* shotCell.m */,
+				D2EC39D418112588006F40EE /* favoriteViewController.h */,
+				D2EC39D518112588006F40EE /* favoriteViewController.m */,
 			);
 			path = TestApp;
 			sourceTree = "<group>";
@@ -238,6 +240,7 @@
 				D28E1BC5180D816200533D73 /* InfoPlist.strings */,
 				D28E1BC8180D816200533D73 /* main.m */,
 				D28E1BCA180D816200533D73 /* TestApp-Prefix.pch */,
+				D2EC39D218111B36006F40EE /* favorites.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -438,6 +441,7 @@
 				D2EC399618105376006F40EE /* Clapham Common Industries.jpeg in Resources */,
 				D2EC399D18105376006F40EE /* Italian Street Musicians.jpeg in Resources */,
 				D2EC399C18105376006F40EE /* Hookey Alf, Of Whitechapel.jpeg in Resources */,
+				D2EC39D318111B36006F40EE /* favorites.plist in Resources */,
 				D2EC39A318105376006F40EE /* Public Disinfectors.jpeg in Resources */,
 				D2EC399E18105376006F40EE /* London Cabmen.jpeg in Resources */,
 				D2EC39A118105376006F40EE /* November Effigies.jpeg in Resources */,
@@ -475,9 +479,9 @@
 			files = (
 				D2855F0918103EED003E335D /* shotCell.m in Sources */,
 				D2EC39CE1810ADDF006F40EE /* favButton.m in Sources */,
+				D2EC39D618112588006F40EE /* favoriteViewController.m in Sources */,
 				D28E1BCD180D816200533D73 /* AppDelegate.m in Sources */,
 				D2855E70180FE267003E335D /* shotsViewController.m in Sources */,
-				D2855E73180FE378003E335D /* favoriteViewController.m in Sources */,
 				D2EC39D11810B5CF006F40EE /* Favorites.m in Sources */,
 				D28E1BC9180D816200533D73 /* main.m in Sources */,
 			);

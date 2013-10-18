@@ -10,14 +10,28 @@
 
 @implementation Favorites
 
+@synthesize favoritesList;
+
+NSString *path;
+
 - (BOOL)isFavorite:(NSString *) maybeFavorite {
     return [favoritesList containsObject:maybeFavorite];
+}
+
+- (BOOL) isEmpty {
+    if ([favoritesList count]) {
+        return true;
+    }
+    return false;
 }
 
 - (void) setFavorite: (NSString *) newFavorite {
     if (![self isFavorite:newFavorite]) {
         [favoritesList addObject:newFavorite];
-        [favoritesList writeToFile:path atomically:YES];
+        NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+        NSString *documentsDirectory = [paths objectAtIndex:0];
+        NSString *file = [documentsDirectory stringByAppendingPathComponent:@"favorites.plist"];
+        [favoritesList writeToFile:file atomically:YES];
         return;
     }
     //throw exception
@@ -26,7 +40,10 @@
 - (void) removeFavorite:(NSString *)oldFavorite {
     if ([self isFavorite:oldFavorite]) {
         [favoritesList removeObject:oldFavorite];
-        [favoritesList writeToFile:path atomically:YES];
+        NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+        NSString *documentsDirectory = [paths objectAtIndex:0];
+        NSString *file = [documentsDirectory stringByAppendingPathComponent:@"favorites.plist"];
+        [favoritesList writeToFile:file atomically:YES];
         return;
     }
     //throw exception
@@ -34,7 +51,7 @@
 
 static Favorites *sharedFavorites = nil;    // static instance variable
 
-+ (Favorites *)sharedCenter {
++ (Favorites *)instance {
     if (sharedFavorites == nil) {
         sharedFavorites = [[super allocWithZone:NULL] init];
     }
@@ -45,13 +62,15 @@ static Favorites *sharedFavorites = nil;    // static instance variable
     if ( (self = [super init]) ) {
         // your custom initialization
         path = [[NSBundle mainBundle] pathForResource:@"favorites" ofType:@"plist"];
+        favoritesList = [NSMutableArray alloc];
+        favoritesList = [favoritesList initWithContentsOfFile:path];
     }
     return self;
 }
 
 // singleton methods
 + (id)allocWithZone:(NSZone *)zone {
-    return [[self sharedCenter] retain];
+    return [[self instance] retain];
 }
 
 - (id)copyWithZone:(NSZone *)zone {

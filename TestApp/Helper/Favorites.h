@@ -9,11 +9,13 @@
 #import <Foundation/Foundation.h>
 
 @interface Favorites : NSObject {
-    NSString *path;
     NSMutableArray *favoritesList;
 }
-+ (Favorites *)sharedCenter;   // class method to return the singleton object
++ (Favorites *)instance;   // class method to return the singleton object
 - (BOOL) isFavorite: (NSString *) maybeFavorite;
+- (BOOL) isEmpty;
 - (void) setFavorite: (NSString *) newFavorite;
 - (void) removeFavorite: (NSString *) oldFavorite;
+
+@property (retain, readonly) NSArray* favoritesList;
 @end

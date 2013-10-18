@@ -19,9 +19,17 @@
 
 
 - (void)toggleFavorite:(id)sender{
-    [(UIButton*)sender setBackgroundImage:[UIImage imageNamed:@"favheart.png"] forState:UIControlStateNormal];
     favButton *btn = sender;
-    NSLog(@"%@", btn.shotName);
+    if ([[Favorites instance] isFavorite:btn.shotName]) {
+        [[Favorites instance] removeFavorite:btn.shotName];
+        [btn setBackgroundImage:[UIImage imageNamed:@"heart.png"] forState:UIControlStateNormal];
+    }
+    else {
+        [[Favorites instance] setFavorite:btn.shotName];
+        [btn setBackgroundImage:[UIImage imageNamed:@"favheart.png"] forState:UIControlStateNormal];
+    }
+    UITableViewCell *cell = (UITableViewCell *)[btn superview];
+    cell = [self.tableView cellForRowAtIndexPath:[self.tableView indexPathForCell:(UITableViewCell *)[btn superview]]];
 }
 
 - (id)initWithStyle:(UITableViewStyle)style
@@ -42,8 +50,11 @@
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    
+}
+
+- (void)viewWillAppear:(BOOL)animated{
     shotsPaths = [[NSArray alloc] initWithArray:[[NSBundle mainBundle] pathsForResourcesOfType:@"jpeg" inDirectory:nil]];
+    [self.tableView reloadData];
 }
 
 - (void)didReceiveMemoryWarning
@@ -87,9 +98,13 @@
     title.text = [t stringByDeletingPathExtension];
     
     favButton *favBtn = [favButton buttonWithType:UIButtonTypeRoundedRect];
-    favBtn.shotName = [[NSString alloc] initWithString:t];
+    favBtn.shotName = [[NSString alloc] initWithString:[shotsPaths objectAtIndex:indexPath.row]];
     [favBtn addTarget:self action:@selector(toggleFavorite:) forControlEvents:UIControlEventTouchUpInside];
-    [favBtn setBackgroundImage:[UIImage imageNamed:@"heart.png"] forState:UIControlStateNormal];
+    //FIXME: plist is clear after restart
+    if ([[Favorites instance] isFavorite:[shotsPaths objectAtIndex:indexPath.row]]) {
+        [favBtn setBackgroundImage:[UIImage imageNamed:@"favheart.png"] forState:UIControlStateNormal];
+    }
+    else [favBtn setBackgroundImage:[UIImage imageNamed:@"heart.png"] forState:UIControlStateNormal];
     favBtn.frame = CGRectMake(0.0, 0.0, 30.0, 30.0);
     cell.accessoryView = favBtn;
     return cell;
