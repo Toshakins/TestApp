@@ -8,6 +8,7 @@
 
 #import "shotsViewController.h"
 
-@interface favoriteViewController : shotsViewController
-
+@interface favoriteViewController : shotsViewController {
+    UILabel *placeholder;
+}
 @end

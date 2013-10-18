@@ -19,10 +19,10 @@ NSString *path;
 }
 
 - (BOOL) isEmpty {
-    if ([favoritesList count]) {
-        return true;
+    if ([favoritesList count] != 0) {
+        return false;
     }
-    return false;
+    return true;
 }
 
 - (void) setFavorite: (NSString *) newFavorite {

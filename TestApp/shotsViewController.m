@@ -7,7 +7,6 @@
 //
 
 #import "shotsViewController.h"
-#import "shotCell.h"
 #import "FavButton.h"
 #import "Favorites.h"
 
@@ -16,7 +15,6 @@
 @end
 
 @implementation shotsViewController
-
 
 - (void)toggleFavorite:(id)sender{
     favButton *btn = sender;
@@ -84,7 +82,7 @@
     
     // Configure the cell...
     if (cell == nil) {
-        cell = [[[shotCell alloc] initWithStyle:UITableViewCellStyleDefault
+        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
                                        reuseIdentifier:CellIdentifier] autorelease];
     }
     NSString *t = [[NSString alloc] initWithString:[[shotsPaths objectAtIndex:indexPath.row] lastPathComponent]];

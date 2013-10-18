@@ -9,14 +9,14 @@
 #import <UIKit/UIKit.h>
 #import "shotsViewController.h"
 #import "favoriteViewController.h"
+#import "settingsViewController.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 {
     UITabBarController	*tabBarController;
     shotsViewController *shotsController;
     favoriteViewController  *favoriteController;
-    UITableView *shotsView, *favoriteView;
-    NSMutableArray *shotsTable;
+    settingsViewController *settingsController;
     
 }
 

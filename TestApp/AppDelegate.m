@@ -21,15 +21,19 @@
     tabBarController = [[UITabBarController alloc] init];
     shotsController = [[shotsViewController alloc] init];
     favoriteController = [[favoriteViewController alloc] init];
+    settingsController = [[settingsViewController alloc] init];
     
     UIImage *shotsImage = [UIImage imageNamed:@"camera.png"];
     UITabBarItem *shotsItem = [[UITabBarItem alloc] initWithTitle:@"Shots" image:shotsImage tag:0];
     UIImage *favoriteImage = [UIImage imageNamed:@"star.png"];
     UITabBarItem *favoriteItem = [[UITabBarItem alloc] initWithTitle:@"Favorite" image:favoriteImage tag:0];
+    UIImage *settingsImage = [UIImage imageNamed:@"cog_02.png"];
+    UITabBarItem *settingsItem = [[UITabBarItem alloc] initWithTitle:@"Settings" image:settingsImage tag:0];
     
     shotsController.tabBarItem = shotsItem, favoriteController.tabBarItem = favoriteItem;
+    settingsController.tabBarItem = settingsItem;
     
-    NSArray *controllers = [NSArray arrayWithObjects:shotsController, favoriteController, nil];
+    NSArray *controllers = [NSArray arrayWithObjects:shotsController, favoriteController, settingsController, nil];
     tabBarController.viewControllers = controllers;
     self.window.rootViewController = tabBarController;
     

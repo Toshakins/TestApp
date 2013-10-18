@@ -16,16 +16,6 @@
 
 @implementation favoriteViewController
 
-- (void)toggleFavorite:(id)sender{
-    favButton *btn = sender;
-    if ([[Favorites instance] isFavorite:btn.shotName]) {
-        [[Favorites instance] removeFavorite:btn.shotName];
-    }
-    UITableViewCell *cell = (UITableViewCell *)[btn superview];
-    cell = [self.tableView cellForRowAtIndexPath:[self.tableView indexPathForCell:(UITableViewCell *)[btn superview]]];
-    [self.tableView reloadData];
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -35,6 +25,15 @@
 -(void)viewWillAppear:(BOOL)animated{
     shotsPaths = [[NSArray alloc] initWithArray:[[Favorites instance] favoritesList]];
     [self.tableView reloadData];
+    if ([[Favorites instance] isEmpty]) {
+        placeholder = [[UILabel alloc] initWithFrame:CGRectMake(self.view.center.x, self.view.center.y - 5, 100, 100)];
+        placeholder.textAlignment = UITextAlignmentCenter;
+        [self.tableView addSubview:placeholder];
+        placeholder.text = [[NSString alloc] initWithString:@"No favorites"];
+    }
+    else {
+        [placeholder removeFromSuperview];
+    }
 }
 
 - (void)didReceiveMemoryWarning

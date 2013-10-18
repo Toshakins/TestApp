@@ -9,7 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface shotsViewController : UITableViewController {
-    NSDictionary *shots;
     NSArray *shotsPaths;
 }
 @end
