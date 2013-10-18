@@ -10,16 +10,11 @@
 
 @implementation shotCell
 
-@synthesize cellButton;
-
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
         // Initialization code
-        cellButton = [[UIButton alloc] init];
-        [self.contentView addSubview:cellButton];
-        self.imageView.contentMode = UIViewContentModeScaleAspectFit;
     }
     return self;
 }

@@ -68,6 +68,8 @@
 		D2EC39C618108ABD006F40EE /* heart@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2EC39C418108ABD006F40EE /* heart@2x.png */; };
 		D2EC39C918109E5D006F40EE /* favheart.png in Resources */ = {isa = PBXBuildFile; fileRef = D2EC39C718109E5D006F40EE /* favheart.png */; };
 		D2EC39CA18109E5D006F40EE /* favheart@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2EC39C818109E5D006F40EE /* favheart@2x.png */; };
+		D2EC39CE1810ADDF006F40EE /* favButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D2EC39CD1810ADDF006F40EE /* favButton.m */; };
+		D2EC39D11810B5CF006F40EE /* Favorites.m in Sources */ = {isa = PBXBuildFile; fileRef = D2EC39D01810B5CF006F40EE /* Favorites.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -149,6 +151,10 @@
 		D2EC39C418108ABD006F40EE /* heart@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "heart@2x.png"; sourceTree = "<group>"; };
 		D2EC39C718109E5D006F40EE /* favheart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = favheart.png; sourceTree = "<group>"; };
 		D2EC39C818109E5D006F40EE /* favheart@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "favheart@2x.png"; sourceTree = "<group>"; };
+		D2EC39CC1810ADDF006F40EE /* favButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = favButton.h; path = Helper/favButton.h; sourceTree = "<group>"; };
+		D2EC39CD1810ADDF006F40EE /* favButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = favButton.m; path = Helper/favButton.m; sourceTree = "<group>"; };
+		D2EC39CF1810B5CF006F40EE /* Favorites.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Favorites.h; path = Helper/Favorites.h; sourceTree = "<group>"; };
+		D2EC39D01810B5CF006F40EE /* Favorites.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Favorites.m; path = Helper/Favorites.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -208,6 +214,7 @@
 		D28E1BC2180D816200533D73 /* TestApp */ = {
 			isa = PBXGroup;
 			children = (
+				D2EC39CB1810ADB3006F40EE /* Helpers */,
 				D28E1BCB180D816200533D73 /* AppDelegate.h */,
 				D28E1BCC180D816200533D73 /* AppDelegate.m */,
 				D28E1BCE180D816200533D73 /* Images.xcassets */,
@@ -312,6 +319,17 @@
 			);
 			name = Icons;
 			path = TabBarIcons;
+			sourceTree = "<group>";
+		};
+		D2EC39CB1810ADB3006F40EE /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				D2EC39CC1810ADDF006F40EE /* favButton.h */,
+				D2EC39CD1810ADDF006F40EE /* favButton.m */,
+				D2EC39CF1810B5CF006F40EE /* Favorites.h */,
+				D2EC39D01810B5CF006F40EE /* Favorites.m */,
+			);
+			name = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -456,9 +474,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				D2855F0918103EED003E335D /* shotCell.m in Sources */,
+				D2EC39CE1810ADDF006F40EE /* favButton.m in Sources */,
 				D28E1BCD180D816200533D73 /* AppDelegate.m in Sources */,
 				D2855E70180FE267003E335D /* shotsViewController.m in Sources */,
 				D2855E73180FE378003E335D /* favoriteViewController.m in Sources */,
+				D2EC39D11810B5CF006F40EE /* Favorites.m in Sources */,
 				D28E1BC9180D816200533D73 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

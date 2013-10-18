@@ -8,10 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface shotCell : UITableViewCell {
-    UIButton *cellButton;
-}
-
-@property (nonatomic, retain)UIButton *cellButton;
+@interface shotCell : UITableViewCell
 
 @end

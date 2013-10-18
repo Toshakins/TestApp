@@ -8,6 +8,8 @@
 
 #import "shotsViewController.h"
 #import "shotCell.h"
+#import "FavButton.h"
+#import "Favorites.h"
 
 @interface shotsViewController ()
 
@@ -15,9 +17,11 @@
 
 @implementation shotsViewController
 
+
 - (void)toggleFavorite:(id)sender{
     [(UIButton*)sender setBackgroundImage:[UIImage imageNamed:@"favheart.png"] forState:UIControlStateNormal];
-    
+    favButton *btn = sender;
+    NSLog(@"%@", btn.shotName);
 }
 
 - (id)initWithStyle:(UITableViewStyle)style
@@ -82,11 +86,12 @@
     [cell.contentView addSubview:title];
     title.text = [t stringByDeletingPathExtension];
     
-    UIButton *myButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    [myButton addTarget:self action:@selector(toggleFavorite:) forControlEvents:UIControlEventTouchUpInside];
-    [myButton setBackgroundImage:[UIImage imageNamed:@"heart.png"] forState:UIControlStateNormal];
-    myButton.frame = CGRectMake(0.0, 0.0, 30.0, 30.0);
-    cell.accessoryView = myButton;
+    favButton *favBtn = [favButton buttonWithType:UIButtonTypeRoundedRect];
+    favBtn.shotName = [[NSString alloc] initWithString:t];
+    [favBtn addTarget:self action:@selector(toggleFavorite:) forControlEvents:UIControlEventTouchUpInside];
+    [favBtn setBackgroundImage:[UIImage imageNamed:@"heart.png"] forState:UIControlStateNormal];
+    favBtn.frame = CGRectMake(0.0, 0.0, 30.0, 30.0);
+    cell.accessoryView = favBtn;
     return cell;
 }
 
